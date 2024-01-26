@@ -1,0 +1,58 @@
+mem1_ssd1_v2_x2	2	46.6G	storage Amazon EC2 NVMe Instance Storage	36.18
+mem1_ssd1_v2_x4	4	93.1G	storage Amazon EC2 NVMe Instance Storage	78.30
+mem1_ssd1_v2_x8	8	186.3G	storage Amazon EC2 NVMe Instance Storage	164.22
+mem1_ssd1_v2_x16	16	372.5G	storage Amazon EC2 NVMe Instance Storage	334.14
+mem1_ssd1_v2_x36	36	838.2G	storage Amazon EC2 NVMe Instance Storage	408.04
+mem1_ssd1_v2_x72	72	838.2G	storage Amazon EC2 NVMe Instance Storage	432.65
+mem2_ssd1_v2_x2	2	69.9G	storage Amazon EC2 NVMe Instance Storage	69.94
+mem2_ssd1_v2_x4	4	139.7G	storage Amazon EC2 NVMe Instance Storage	126.66
+mem2_ssd1_v2_x8	8	279.4G	storage Amazon EC2 NVMe Instance Storage	255.33
+mem2_ssd1_v2_x16	16	558.6G	storage Amazon EC2 NVMe Instance Storage	456.24
+mem2_ssd1_v2_x32	32	558.8G	storage Amazon EC2 NVMe Instance Storage	450.66
+mem2_ssd1_v2_x48	48	838.2G	storage Amazon EC2 NVMe Instance Storage	419.58
+mem2_ssd1_v2_x64	64	558.8G	storage Amazon EC2 NVMe Instance Storage	446.67
+mem2_ssd1_v2_x96	96	838.2G	storage Amazon EC2 NVMe Instance Storage	469.17
+mem3_ssd1_v2_x2	2	69.9G	storage Amazon EC2 NVMe Instance Storage	65.53
+mem3_ssd1_v2_x4	4	139.7G	storage Amazon EC2 NVMe Instance Storage	126.67
+mem3_ssd1_v2_x8	8	279.4G	storage Amazon EC2 NVMe Instance Storage	255.35
+mem3_ssd1_v2_x16	16	558.6G	storage Amazon EC2 NVMe Instance Storage	336.02
+mem3_ssd1_v2_x32	32	558.8G	storage Amazon EC2 NVMe Instance Storage	506.41
+null
+mem3_ssd1_v2_x64	64	558.8G	storage Amazon EC2 NVMe Instance Storage	459.64
+mem3_ssd1_v2_x96	96	838.2G	storage Amazon EC2 NVMe Instance Storage	428.71
+mem4_ssd1_x128	128	13.9G	82371SB PIIX3 IDE [Natoma/Triton II]	218.72
+mem1_ssd2_v2_x2	2	159.9G	storage Amazon Elastic Block Store	111.35
+mem1_ssd2_v2_x4	4	319.9G	storage Amazon Elastic Block Store	173.16
+mem1_ssd2_v2_x8	8	639.9G	storage Amazon Elastic Block Store	109.50
+mem1_ssd2_v2_x16	16	13.9G	storage Amazon Elastic Block Store	193.06
+mem1_ssd2_v2_x36	36	13.9G	storage Amazon Elastic Block Store	166.73
+mem1_ssd2_v2_x72	72	13.9G	storage Amazon Elastic Block Store	165.77
+mem1_ssd1_x2	2	31.7G	82371SB PIIX3 IDE [Natoma/Triton II]	18.87
+mem1_ssd1_x4	4	13.9G	82371SB PIIX3 IDE [Natoma/Triton II]	35.55
+mem1_ssd1_x8	8	160.1G	82371SB PIIX3 IDE [Natoma/Triton II]	72.23
+mem1_ssd1_x16	16	305.2G	82371SB PIIX3 IDE [Natoma/Triton II]	125.74
+mem2_ssd1_x2	2	30.7G	82371SB PIIX3 IDE [Natoma/Triton II]	20.74
+mem2_ssd1_x4	4	76.3G	82371SB PIIX3 IDE [Natoma/Triton II]	30.30
+mem2_ssd1_x8	8	150.8G	82371SB PIIX3 IDE [Natoma/Triton II]	80.25
+mem3_ssd1_x2	2	30.7G	82371SB PIIX3 IDE [Natoma/Triton II]	25.13
+mem3_ssd1_x4	4	75.4G	82371SB PIIX3 IDE [Natoma/Triton II]	45.96
+mem3_ssd1_x8	8	150.8G	82371SB PIIX3 IDE [Natoma/Triton II]	31.46
+mem3_ssd1_x16	16	300.7G	82371SB PIIX3 IDE [Natoma/Triton II]	136.36
+mem1_ssd1_x2	2	31.7G	82371SB PIIX3 IDE [Natoma/Triton II]	17.87
+mem1_ssd1_x4	4	13.9G	82371SB PIIX3 IDE [Natoma/Triton II]	34.65
+mem1_ssd1_x8	8	160.1G	82371SB PIIX3 IDE [Natoma/Triton II]	70.89
+mem1_ssd1_x16	16	305.2G	82371SB PIIX3 IDE [Natoma/Triton II]	124.88
+mem1_ssd1_x32	32	640.5G	82371SB PIIX3 IDE [Natoma/Triton II]	240.20
+mem2_ssd1_x2	2	30.7G	82371SB PIIX3 IDE [Natoma/Triton II]	19.56
+mem2_ssd1_x4	4	76.3G	82371SB PIIX3 IDE [Natoma/Triton II]	26.68
+mem2_ssd1_x8	8	150.8G	82371SB PIIX3 IDE [Natoma/Triton II]	79.76
+mem3_ssd1_x2	2	13.9G	82371SB PIIX3 IDE [Natoma/Triton II]	32.76
+mem3_ssd1_x4	4	75.4G	82371SB PIIX3 IDE [Natoma/Triton II]	46.54
+mem3_ssd1_x8	8	150.8G	82371SB PIIX3 IDE [Natoma/Triton II]	23.52
+mem3_ssd1_x16	16	300.7G	82371SB PIIX3 IDE [Natoma/Triton II]	103.84
+mem3_ssd1_x32	32	601.4G	82371SB PIIX3 IDE [Natoma/Triton II]	93.83
+mem1_ssd2_x2	2	159.9G	82371SB PIIX3 IDE [Natoma/Triton II]	58.48
+mem1_ssd2_x4	4	319.9G	82371SB PIIX3 IDE [Natoma/Triton II]	83.88
+mem1_ssd2_x8	8	639.9G	82371SB PIIX3 IDE [Natoma/Triton II]	115.96
+mem1_ssd2_x16	16	13.9G	82371SB PIIX3 IDE [Natoma/Triton II]	190.25
+mem1_ssd2_x36	36	13.9G	82371SB PIIX3 IDE [Natoma/Triton II]	156.98
