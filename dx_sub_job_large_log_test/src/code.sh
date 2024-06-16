@@ -1,4 +1,4 @@
-
+#!/bin/bash
 set -exo pipefail
 
 # prefixes all lines of commands written to stdout with datetime
@@ -51,4 +51,3 @@ main() {
     echo "Done"
 
 }
-
