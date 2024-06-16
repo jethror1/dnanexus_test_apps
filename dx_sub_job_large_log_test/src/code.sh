@@ -40,7 +40,6 @@ main() {
         printf "${j}\t-\t$(echo $RANDOM | md5sum)\n"
     done
 
-
     # start up 72 sub jobs
     xargs -n1 -P32 -I{} bash -c \
         "dx-jobutil-new-job _sub_job \
