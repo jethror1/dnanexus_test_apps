@@ -36,15 +36,13 @@ main() {
 
     # dump a load of lines to the logs to simulate other apps where
     # there's a large amount before starting sub jobs
-    for i in $(seq 1 10); do
-        printf "Starting iteration ${i}\n"
-        for j in $(seq 1 1000); do
-            printf "${j}\t$(echo $RANDOM | md5sum)\n"
-        done
+    for j in $(seq 1 10000); do
+        printf "${j}\t-\t$(echo $RANDOM | md5sum)\n"
     done
 
+
     # start up 72 sub jobs
-    xargs -n1 -P16 -I{} bash -c \
+    xargs -n1 -P32 -I{} bash -c \
         "dx-jobutil-new-job _sub_job \
         --instance-type=\"mem1_ssd1_v2_x2\" \
         --name \"sub job {}\"" >> job_ids <<< $(seq 1 72)
