@@ -1,7 +1,7 @@
 {
-  "name": "compare_parallel_download",
-  "title": "compare_parallel_download",
-  "summary": " ",
+  "name": "compare_parallel_download_upload",
+  "title": "compare_parallel_download_upload",
+  "summary": "app to test comparison of built in dx methods for parallel download / upload of data vs in parallel with xargs",
   "dxapi": "1.0.0",
   "version": "1.0.0",
   "inputSpec": [
@@ -11,11 +11,21 @@
     }
   ],
   "outputSpec": [
+    {
+      "name": "files",
+      "class": "array:file",
+      "optional": true
+    },
+    {
+      "name": "summary",
+      "class": "file",
+      "optional": true
+    }
   ],
   "runSpec": {
     "timeoutPolicy": {
       "*": {
-        "hours": 1
+        "hours": 2
       }
     },
     "distribution": "Ubuntu",
