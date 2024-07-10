@@ -12,6 +12,9 @@ set -exo pipefail
 
 main() {
     echo "starting app"
+
+    # wait a short time and exit to allow SSH to connect
+    sleep 10
     exit 1
 }
 
