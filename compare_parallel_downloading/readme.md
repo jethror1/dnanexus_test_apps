@@ -26,6 +26,7 @@ Recorded total time and approximate peak usage of CPU, RAM and download speed
 **mem1_ssd1_v2_x8**
 
 
+* TODO: run this across some instances and generate some comparisons
 
 **mem1_ssd1_v2_x36**
 
@@ -34,7 +35,7 @@ Recorded total time and approximate peak usage of CPU, RAM and download speed
 - max download speed:
 
 `xargs`
-- max CPU: 5%
+- max CPU:
 - max download speed:
 
 
