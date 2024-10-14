@@ -1,0 +1,1 @@
+App to test having an app fail and dropping of SHH connection on failing
