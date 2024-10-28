@@ -1,5 +1,7 @@
 Test of comparing downloading and uploading using the built in methods vs in parallel with xargs
 
+Array of input files can be generated with: `dx find data --path path_to_files --brief | sed 's/^/-ifiles=/g'`
+
 ### Downloading
 The built in method looks to be bound to a single core since `concurrent.futures.ThreadPoolExecutor` is being used here: https://github.com/dnanexus/dx-toolkit/blob/6eeb3293bace8c944460fd6aad010b1ad1a6c621/src/python/dxpy/bindings/download_all_inputs.py#L62
 
@@ -26,6 +28,7 @@ Recorded total time and approximate peak usage of CPU, RAM and download speed
 **mem1_ssd1_v2_x8**
 
 
+* TODO: run this across some instances and generate some comparisons
 
 **mem1_ssd1_v2_x36**
 
@@ -34,7 +37,7 @@ Recorded total time and approximate peak usage of CPU, RAM and download speed
 - max download speed:
 
 `xargs`
-- max CPU: 5%
+- max CPU:
 - max download speed:
 
 

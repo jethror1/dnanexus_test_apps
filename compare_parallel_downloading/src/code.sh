@@ -12,12 +12,12 @@ set -exo pipefail
 
 _dx_built_ins() {
     : '''
-    Test using built in dx-download-all-inputs and dx-upload-all-outputs
+    Test using built in parallel implementation of dx-download-all-inputs and dx-upload-all-outputs
     '''
     echo "Downloading with dx-download-all-inputs"
 
     SECONDS=0
-    /usr/bin/time -v dx-download-all-inputs 1> /dev/null
+    /usr/bin/time -v dx-download-all-inputs --parallel 1> /dev/null
     duration=$SECONDS
 
     total_size=$(du -sh /home/dnanexus/in/ | cut -f1)
@@ -27,7 +27,7 @@ _dx_built_ins() {
     echo "Downloaded with dx-download-all-inputs --parallel ${total_files} files " \
         "(${total_size}) in ${elapsed}"
 
-    printf "dx-download-all-inputs\t${elapsed}\t${total_files}\t${total_size}\n" \
+    printf "dx-download-all-inputs --parallel\t${elapsed}\t${total_files}\t${total_size}\n" \
         >> "${DX_JOB_ID}_summary.tsv"
 
     # move downloaded files to be able to upload
@@ -138,46 +138,6 @@ main() {
     file_id=$(dx upload --brief "${DX_JOB_ID}_summary.tsv")
     dx-jobutil-add-output "summary" "$file_id"
 
-    # # drop the $dnanexus_link from the file IDs in array input
-    # file_ids=$(grep -Po  "file-[\d\w]+" <<< "${files[@]}")
-
-
-
-    # echo "$file_ids" | xargs -P${CORES} -n1 -I{} sh -c "dx download --no-progress {} -o in/"
-
-    # duration=$SECONDS
-
-    # total=$(du -sh /home/dnanexus/in/ | cut -f1)
-
-    # echo "Downloaded with xargs in parallel $(find in/ -type f | wc -l) files " \
-    #     "(${total}) in $(($duration / 60))m$(($duration % 60))s"
-
-
-    # SECONDS=0
-    # /usr/bin/time -v dx-download-all-inputs
-    # duration=$SECONDS
-
-    # total=$(du -sh /home/dnanexus/ | cut -f1)
-
-    # echo "Downloaded with dx-download-all-inputs --parallel $(find in/ -type f | wc -l) files " \
-    #     "(${total}) in $(($duration / 60))m$(($duration % 60))s"
-
-    # rm -rf in/
-
-    # Testing upload
-    # SECONDS=0
-    # mkdir -p out/files/
-    # mv in/* out/files/
-    # /usr/bin/time -v dx-upload-all-outputs --parallel
-    # duration=$SECONDS
-
-    # total=$(du -sh /home/dnanexus/ | cut -f1)
-    # echo "Upload all files with dx-upload-all-outputs --parallel in $(($duration / 60))m$(($duration % 60))s"
-
-
-
-    # # remove the output references to not actually keep the output files in the project
-    # rm job_output.json
-
+    echo "Done"
 }
 
