@@ -14,5 +14,6 @@ main() {
 
     /usr/bin/time -v python3 dx_download_all_inputs.py
 
+    find in/ -type f
 }
 

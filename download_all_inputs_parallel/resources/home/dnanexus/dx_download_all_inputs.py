@@ -4,7 +4,9 @@ from concurrent.futures import (
     ThreadPoolExecutor,
     as_completed,
 )
+from itertools import zip_longest
 import os
+from time import sleep
 
 import dxpy
 from dxpy.utils import file_load_utils
@@ -27,10 +29,10 @@ def download_single_file(file_details, download_dir, project=None):
 
     print(f"Downloading {file_id} to {out_file}")
 
-    # dxpy.bindings.dxfile_functions.download_dxfile(
-    #     dxid=file_id,
-    #     filename=out_file,
-    # )
+    dxpy.bindings.dxfile_functions.download_dxfile(
+        dxid=file_id,
+        filename=out_file,
+    )
 
 
 def _submit_to_pool(pool, func, item_input, items, **kwargs):
@@ -105,6 +107,7 @@ def multi_thread_download(files, download_dir, threads):
                 future.result()
             except Exception as exc:
                 print(f"Error in downloading {concurrent_jobs[future]}")
+                sleep(5)
                 raise exc
 
 
@@ -136,9 +139,9 @@ def multi_core_download(files, download_dir, cores, threads):
         f"Downloading {len(files)} files to {download_dir} using {cores} cores"
     )
 
-    # split list of files to download into equal chunks by how many cores
-    # we are using
-    files = [files[i : i + cores] for i in range(0, len(files), cores)]
+    # split list of files to download into equal chunks by how
+    # many cores we are using
+    files = [files[i::cores] for i in range(cores)]
 
     with ProcessPoolExecutor(max_workers=cores) as executor:
         concurrent_jobs = _submit_to_pool(
@@ -160,6 +163,7 @@ def multi_core_download(files, download_dir, cores, threads):
                     "Error in downloading one or more files from:"
                     f" {concurrent_jobs[future]}"
                 )
+                sleep(5)
                 raise exc
 
 
