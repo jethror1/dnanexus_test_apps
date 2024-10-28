@@ -4,7 +4,6 @@ from concurrent.futures import (
     ThreadPoolExecutor,
     as_completed,
 )
-from itertools import zip_longest
 import os
 from time import sleep
 
