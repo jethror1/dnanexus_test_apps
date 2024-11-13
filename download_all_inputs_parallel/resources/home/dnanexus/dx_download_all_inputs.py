@@ -4,7 +4,6 @@ from concurrent.futures import (
     ThreadPoolExecutor,
     as_completed,
 )
-from itertools import zip_longest
 import os
 from time import sleep
 
@@ -215,7 +214,7 @@ def main():
     job_input_file = file_load_utils.get_input_json_file()
     dirs, inputs, _ = file_load_utils.get_job_input_filenames(job_input_file)
 
-    _create_dirs("/home/dnanexus", dirs)
+    _create_dirs("/home/dnanexus/in", dirs)
 
     # flatten to a single list and remove the 'handler' item return from
     # get_job_input_filenames as this is not picklable and not needed
@@ -234,7 +233,7 @@ def main():
     # with multiple threads due to the overhead of opening a ProcessPool)
     multi_core_download(
         files=file_records,
-        download_dir="/home/dnanexus",
+        download_dir="/home/dnanexus/in",
         cores=args.cores,
         threads=args.threads,
     )

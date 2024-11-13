@@ -65,7 +65,7 @@ _parallel_download_upload () {
     file_ids=$(grep -Po  "file-[\d\w]+" <<< "${files[@]}")
 
     SECONDS=0
-    echo "$file_ids" | xargs -P${CORES} -n1 -I{} sh -c "dx download --no-progress {} -o in/"
+    echo "$file_ids" | xargs -P${CORES} -n1 -I{} sh -c "dx download --no-progress -f {} -o in/"
     duration=$SECONDS
 
     total_size=$(du -sh /home/dnanexus/in/ | cut -f1)
@@ -132,7 +132,7 @@ main() {
     # summary file for comparison
     printf "method\ttime\ttotal files\ttotal size\n" > "${DX_JOB_ID}_summary.tsv"
 
-    _dx_built_ins
+    # _dx_built_ins
     _parallel_download_upload
 
     file_id=$(dx upload --brief "${DX_JOB_ID}_summary.tsv")
