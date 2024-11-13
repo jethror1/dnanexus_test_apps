@@ -18,7 +18,8 @@
     "release": "20.04",
     "version": "0",
     "interpreter": "bash",
-    "file": "src/code.sh"
+    "file": "src/code.sh",
+    "headJobOnDemand": true
   },
   "developers":[
     "org-emee_1"
