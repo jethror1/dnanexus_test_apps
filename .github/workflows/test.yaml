@@ -1,7 +1,7 @@
 name: e2e test reminder comment
 on:
   pull_request:
-    types: [opened, edited, synchronize, reopened]
+    types: [opened]
 
 jobs:
   comment-in-pr:
