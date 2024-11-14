@@ -1,7 +1,7 @@
 name: e2e test reminder comment
 on:
   pull_request:
-    types: [opened]
+    types: [opened, reopened, synchronize]
 
 jobs:
   comment-in-pr:
@@ -22,5 +22,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'test'
+              body: ':warning: Reminder to manually run end to end tests in https://github.com/eastgenomics/s3_upload/tree/main/tests/e2e\n\nThese may be run with the following: `python3 -m pytest tests/e2e/'
             })
