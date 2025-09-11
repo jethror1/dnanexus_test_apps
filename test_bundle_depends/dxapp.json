@@ -27,8 +27,8 @@
     "org-emee_1"
   ],
   "regionalOptions": {
-    "aws:eu-central-1": {
-      "bundledDepends": [{"name": "bundle.tar.xz", "id": {"$dnanexus_link": "file-J318jXQ49Pj8fbX32zq3YGp2"}}],
+    "aws:us-east-1": {
+      "bundledDepends": [{"name": "bundle.tar.xz", "id": {"$dnanexus_link": "file-J318pXj0gjVzGpGQ9Pj0jJF8"}}],
       "systemRequirements": {
         "*": {
           "instanceType": "mem1_ssd1_v2_x2"
