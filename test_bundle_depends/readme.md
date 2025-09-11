@@ -1,0 +1,1 @@
+App for testing behaviour of bundleDepends automatically unpacking compressed tars

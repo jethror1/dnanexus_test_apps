@@ -1,0 +1,39 @@
+{
+  "name": "test_bundle_depends",
+  "title": "test_bundle_depends",
+  "summary": "test_bundle_depends",
+  "dxapi": "1.0.0",
+  "version": "1.0.0",
+  "inputSpec": [
+  ],
+  "outputSpec": [
+  ],
+  "runSpec": {
+    "timeoutPolicy": {
+      "*": {
+        "hours": 1
+      }
+    },
+    "distribution": "Ubuntu",
+    "release": "24.04",
+    "version": "0",
+    "interpreter": "bash",
+    "file": "src/code.sh"
+  },
+  "developers":[
+    "org-emee_1"
+  ],
+  "authorizedUsers": [
+    "org-emee_1"
+  ],
+  "regionalOptions": {
+    "aws:eu-central-1": {
+      "bundledDepends": [{"name": "bundle.tar.xz", "id": {"$dnanexus_link": "file-J318jXQ49Pj8fbX32zq3YGp2"}}],
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem1_ssd1_v2_x2"
+        }
+      }
+    }
+  }
+}
