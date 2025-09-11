@@ -34,7 +34,8 @@ main() {
     xargs -n1 -P16 -I{} bash -c \
         "dx-jobutil-new-job _sub_job \
         --instance-type=\"mem1_ssd1_v2_x2\" \
-        --name \"sub job {}\"" >> job_ids <<< $(seq 1 72)
+        --name \"sub job {}\" \
+	--extra-args '{\"priority\": \"high\"}'" >> job_ids <<< $(seq 1 72)
 
     cat job_ids
 
