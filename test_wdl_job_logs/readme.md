@@ -1,0 +1,1 @@
+Test of frequent job logs in WDL task causing failed jobs to not be terminated
